@@ -4,7 +4,7 @@
   "description": "Demo app",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
