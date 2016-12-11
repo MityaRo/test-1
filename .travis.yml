@@ -1,7 +1,14 @@
 language: node_js
 node_js:
- - "6"
+- '6'
 install:
- - npm install
-script: 
- - npm test
+- npm install
+script:
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: KQHnozND3UWR8xAe6QMUiWox3/OivWtRc+h6QwOULNszPfGcgD6MmIPDovoDFj0rEduNukaCJL//oWyZzOBTOxu6AYGOIuUY9rh2HMmHXcAcMbvCqLN9jbvB4ldujt+IEbF5t2Favc6q10NG+7ewccnME8sjY2I+9hZjVMWXf702F0mqKnFOd/aHM6STFPrRt4c8MBMsxI8HWTdnUT2bDiT99DVpI9thjTh0HJnABnL8LFE9WX1GexMtW2T1jae5Ata6VYbw3FO+XvgvKmbgemHM+DgXqoVmUrha652jYLR+2LZmELECXIRbCq0J/wrzmnPKNQ3HCB2JIyFwMHROXJMTYz30yN7ApiZgk4VV7z4E7mkHAWcZ5yP63aS8WIuRTxamUSBnoo2+fco5D48gW8TAIEgfFjsML3zrXKTyjn9NiM5XUOxcKfl9L9sP3tZOIn62G/2MbCPh/Hj6pV2nXaU4s8S54OyHdI3///XxzA4IcO+3zXNBkcIfgIfAOiHcXUQiwZ67g3Eeh1i1pgjfotVLZBW1b4F4e5tdkb3VUJmIQQypk+Tvc5hqIcpyvnMAVyELcgVc5IwW6tQ4ad2RIEty4D4cLR0jUzaQwFT11YeM8P5Byx/okSI+8JSdtvjtZLyn/tAryxe25frhGTAwQos2coIbq6Nv4gho/pAE8R0=
+  app: test-1
+  on:
+    repo: MityaRo/test-1
