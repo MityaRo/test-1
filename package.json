@@ -1,8 +1,8 @@
 {
-  "name": "test-1",
+  "name": "ci-workshop-test-1",
   "version": "1.0.0",
   "description": "Demo app",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
     "start": "node app.js"
@@ -27,4 +27,3 @@
     "nib": "^1.0.4"
   }
 }
-  
