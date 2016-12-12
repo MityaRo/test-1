@@ -26,4 +26,4 @@ app.get('/', function (req, res) {
   { title : 'Home' }
   )
 })
-app.listen(80)
+app.listen($DYNO)
