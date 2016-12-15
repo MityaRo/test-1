@@ -6,7 +6,7 @@ install:
 script:
 - true
 before_install:
- -wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+ - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 after_success:
   - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
