@@ -9,7 +9,6 @@ before_install:
  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 after_success:
-  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   - git remote add heroku git@heroku.com:HEROKU_APP_NAME.git
   - echo ">>>>>> hello"
   - echo "Host heroku.com" >> ~/.ssh/config
