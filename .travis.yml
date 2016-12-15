@@ -14,3 +14,4 @@ deploy:
     feature-3: ci-workshop-test-1-feature-3
   on:
     repo: MityaRo/test-1
+
