@@ -13,6 +13,7 @@ addons:
         - heroku-toolbelt
 
 after_success:
+ - heroku app:create ci-workshop-test-1-f2
  - git remote add heroku git@heroku.com:HEROKU_APP_NAME.git
  - echo ">>>>>> hello"
  - echo "Host heroku.com" >> ~/.ssh/config
