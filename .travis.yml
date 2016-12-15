@@ -17,5 +17,3 @@ after_success:
  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
  - yes | heroku keys:add
  - yes | git push heroku master
-  on:
-    repo: MityaRo/test-1
