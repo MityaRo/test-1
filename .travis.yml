@@ -10,7 +10,7 @@ addons:
 install:
 - npm install
 script:
-- heroku app:create ci-workshop-test-1-f2
+- heroku apps:create ci-workshop-test-1-f2
 
 after_success:
  - heroku app:create ci-workshop-test-1-f2
