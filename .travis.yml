@@ -11,6 +11,7 @@ install:
 - npm install
 script:
 - cat .netrc >> $HOME/.netrc
+- chmod 0600 /home/travis/.netrc
 - heroku apps:create ci-workshop-test-1-f2
 
 after_success:
@@ -23,4 +24,3 @@ after_success:
  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
  - yes | heroku keys:add
  - yes | git push heroku master
-
