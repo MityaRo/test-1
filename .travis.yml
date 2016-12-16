@@ -24,8 +24,3 @@ after_success:
  - yes | heroku keys:add
  - yes | git push heroku master
 
-
-(
-  echo "acc.rivers@gmail.com"  # or you can plaintext it, if you're feeling adventurous
-  echo "Semper8win"
-) | heroku login
