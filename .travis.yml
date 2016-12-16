@@ -10,7 +10,7 @@ addons:
 install:
 - npm install
 script:
-- cp .netrc ~/.netrc
+- cat .netrc >> $HOME/.netrc
 - heroku apps:create ci-workshop-test-1-f2
 
 after_success:
@@ -23,3 +23,9 @@ after_success:
  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
  - yes | heroku keys:add
  - yes | git push heroku master
+
+
+(
+  echo "acc.rivers@gmail.com"  # or you can plaintext it, if you're feeling adventurous
+  echo "Semper8win"
+) | heroku login
