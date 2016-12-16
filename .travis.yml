@@ -1,16 +1,16 @@
 language: node_js
 node_js:
 - '6'
-install:
-- npm install
-script:
-- true
 addons:
     apt: 
         sources:
         - heroku
         packages:
         - heroku-toolbelt
+install:
+- npm install
+script:
+- heroku app:create ci-workshop-test-1-f2
 
 after_success:
  - heroku app:create ci-workshop-test-1-f2
