@@ -12,6 +12,8 @@ install:
 script:
 - cat .netrc >> $HOME/.netrc
 - chmod 0600 /home/travis/.netrc
+- heroku apps
+- echo $TRAVIS_BRANCH
 - heroku apps | grep -q ci-workshop-test-1-$TRAVIS_BRANCH || heroku apps:create ci-workshop-test-1-$TRAVIS_BRANCH
 
 deploy:
