@@ -5,10 +5,3 @@ http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});   
   res.end('Hello World f4- from Travis\n'); 
 }).listen(port);
-
-var index = '
-<html><body>
-<h1>Here is a link</h1>
-<a href = "https://google.com">Google!</a>
-</body></html>
-'
