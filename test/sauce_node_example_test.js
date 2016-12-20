@@ -16,7 +16,7 @@ describe('x', function() {
     it('Title', function() {
         browser.url(branchUrl)
         browser.getTitle().should.equal('')
-        browser.getUrl().should.equal(branchUrl)
+        browser.getUrl().should.equal(branchUrl+'/')
     });
   });
 });
