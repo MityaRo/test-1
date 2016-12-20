@@ -10,7 +10,7 @@ describe('x', function() {
   describe('1', function() {
     it('Title', function() {
         browser.url(branchUrl)
-        browser.getTitle().should.equal('x')
+        browser.getTitle().should.equal('')
         browser.getUrl().should.equal('x')
     });
   });
