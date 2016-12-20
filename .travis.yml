@@ -13,10 +13,13 @@ script:
 - cat .netrc >> $HOME/.netrc
 - chmod 0600 /home/travis/.netrc
 - heroku apps
+- BRANCH = $TRAVIS_PULL_REQUEST || $TRAVIS_BRANCH
+- echo $TRAVIS_PULL_REQUEST
 - echo $TRAVIS_BRANCH
-- heroku apps | grep -q ci-workshop-test-1-$TRAVIS_BRANCH || heroku apps:create ci-workshop-test-1-$TRAVIS_BRANCH
-- heroku git:remote -a ci-workshop-test-1-$TRAVIS_BRANCH
-- git push heroku $TRAVIS_BRANCH:master
+- echo $BRANCH
+- heroku apps | grep -q ci-workshop-test-1-$BRANCH || heroku apps:create ci-workshop-test-1-$BRANCH
+- heroku git:remote -a ci-workshop-test-1-$BRANCH
+- git push heroku $RANCH:master
 - ./node_modules/.bin/wdio wdio.conf
 
 # deploy:
