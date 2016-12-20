@@ -18,7 +18,7 @@ script:
 - echo $TRAVIS_BRANCH
 - echo $BRANCH
 - heroku apps | grep -q ci-workshop-test-1-$BRANCH || heroku apps:create ci-workshop-test-1-$BRANCH
-- heroku git:remote -a ci-workshop-test-1-$BRANCH
+- heroku git:remote -a ci-workshop-test-1-$TRAVIS_BRANCH
 - git push heroku $BRANCH:master
 
 - ./node_modules/.bin/wdio wdio.conf
