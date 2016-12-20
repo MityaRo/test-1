@@ -17,7 +17,7 @@ script:
 - heroku apps | grep -q ci-workshop-test-1-$TRAVIS_BRANCH || heroku apps:create ci-workshop-test-1-$TRAVIS_BRANCH
 - heroku git:remote -a ci-workshop-test-1-$TRAVIS_BRANCH
 - git push heroku $TRAVIS_BRANCH:master
-- ./node_modules/.bin/wdio wdio.conf
+- 
 
 # deploy:
 #   provider: heroku
