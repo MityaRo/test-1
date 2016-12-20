@@ -2,13 +2,16 @@ var client = require('webdriverio')
 var assert = require('assert')
 var should = require('should');
 
+var branchUrl = 'ci-workshop-test-1-' + process.env.TRAVIS_BRANCH + '.herokuapp.com'
+
 // browser.init()
     
 describe('x', function() {
   describe('1', function() {
     it('Title', function() {
-        browser.url('http://google.com')
-        browser.getTitle().should.equal('Godogle')
+        browser.url(branchUrl)
+        browser.getTitle().should.equal('x')
+        browser.getUrl().should.equal('x')
     });
   });
 });
