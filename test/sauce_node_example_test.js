@@ -2,7 +2,7 @@ var client = require('webdriverio')
 var assert = require('assert')
 var should = require('should');
 
-var branchUrl = 'ci-workshop-test-1-' + process.env.TRAVIS_BRANCH + '.herokuapp.com'
+var branchUrl = 'http://ci-workshop-test-1-' + process.env.TRAVIS_BRANCH + '.herokuapp.com'
 
 // browser.init()
     
