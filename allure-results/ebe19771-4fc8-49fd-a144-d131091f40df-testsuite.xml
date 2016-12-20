@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1482102110758" stop="1482102114717">
+	<name>x 1</name>
+	<title>x 1</title>
+	<test-cases>
+		<test-case start="1482102110759" stop="1482102114716" status="broken">
+			<name>Title</name>
+			<title>Title</title>
+			<labels>
+			</labels>
+			<parameters>
+				<parameter kind="environment-variable" name="capabilities" value="{&quot;maxInstances&quot;:1,&quot;browserName&quot;:&quot;chrome&quot;}"/>
+				<parameter kind="environment-variable" name="spec files" value="[&quot;/Users/dmytro.roshchupkin/Training/Ci/test-1/test/sauce_node_example_test.js&quot;]"/>
+			</parameters>
+			<steps>
+				<step start="1482102110760" stop="1482102111569" status="passed">
+					<name>POST /wd/hub/session/be4a0ce136f64da8a22735bbfe7634b5/execute</name>
+					<title>POST /wd/hub/session/be4a0ce136f64da8a22735bbfe7634b5/execute</title>
+					<attachments>
+						<attachment title="Request" source="95fc7b34-b144-4470-a62c-cdea7758d216-attachment.json" type="application/json" size="59"/>
+						<attachment title="Response" source="dc7426e1-b73a-4f35-aff1-37b47a65f57c-attachment.json" type="application/json" size="89"/>
+					</attachments>
+					<steps>
+					</steps>
+				</step>
+				<step start="1482102111575" stop="1482102111728" status="passed">
+					<name>POST /wd/hub/session/be4a0ce136f64da8a22735bbfe7634b5/url</name>
+					<title>POST /wd/hub/session/be4a0ce136f64da8a22735bbfe7634b5/url</title>
+					<attachments>
+						<attachment title="Request" source="b751b31c-968e-4471-9fef-ece30536a335-attachment.json" type="application/json" size="34"/>
+						<attachment title="Screenshot" source="9565c4f3-869d-4c4e-949c-1845131e412c-attachment.png" type="image/png" size="3709"/>
+					</attachments>
+					<steps>
+					</steps>
+				</step>
+				<step start="1482102113844" stop="1482102114710" status="passed">
+					<name>GET /wd/hub/session/be4a0ce136f64da8a22735bbfe7634b5/title</name>
+					<title>GET /wd/hub/session/be4a0ce136f64da8a22735bbfe7634b5/title</title>
+					<attachments>
+						<attachment title="Response" source="b3fad96b-32aa-4680-8d16-0bf9178802a2-attachment.json" type="application/json" size="95"/>
+					</attachments>
+					<steps>
+					</steps>
+				</step>
+			</steps>
+			<attachments>
+				<attachment title="Response" source="c36b1f9e-f336-401f-9cbc-3281ec55b919-attachment.json" type="application/json" size="91"/>
+			</attachments>
+			<failure>
+				<message>Cannot read property &apos;equal&apos; of undefined</message>
+				<stack-trace>TypeError: Cannot read property &apos;equal&apos; of undefined
+    at Context.&lt;anonymous&gt; (/Users/dmytro.roshchupkin/Training/Ci/test-1/test/sauce_node_example_test.js:19:34)</stack-trace>
+			</failure>
+		</test-case>
+	</test-cases>
+</ns2:test-suite>

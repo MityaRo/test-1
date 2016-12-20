@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1482102229908" stop="1482102233257">
+	<name>x 1</name>
+	<title>x 1</title>
+	<test-cases>
+		<test-case start="1482102229909" stop="1482102233255" status="passed">
+			<name>Title</name>
+			<title>Title</title>
+			<labels>
+			</labels>
+			<parameters>
+				<parameter kind="environment-variable" name="capabilities" value="{&quot;maxInstances&quot;:1,&quot;browserName&quot;:&quot;chrome&quot;}"/>
+				<parameter kind="environment-variable" name="spec files" value="[&quot;/Users/dmytro.roshchupkin/Training/Ci/test-1/test/sauce_node_example_test.js&quot;]"/>
+			</parameters>
+			<steps>
+				<step start="1482102229910" stop="1482102230586" status="passed">
+					<name>POST /wd/hub/session/f666db90ff2144d297d49b7c6de9bcd6/execute</name>
+					<title>POST /wd/hub/session/f666db90ff2144d297d49b7c6de9bcd6/execute</title>
+					<attachments>
+						<attachment title="Request" source="bfd7e3e2-fdbf-473b-8779-3d72e0438896-attachment.json" type="application/json" size="59"/>
+						<attachment title="Response" source="f6e2a9ae-42f9-49f1-a93e-fc511ec9cbe1-attachment.json" type="application/json" size="89"/>
+					</attachments>
+					<steps>
+					</steps>
+				</step>
+				<step start="1482102230591" stop="1482102230845" status="passed">
+					<name>POST /wd/hub/session/f666db90ff2144d297d49b7c6de9bcd6/url</name>
+					<title>POST /wd/hub/session/f666db90ff2144d297d49b7c6de9bcd6/url</title>
+					<attachments>
+						<attachment title="Request" source="2aa328ae-eb02-4f68-b4d9-6df31ff0ddcf-attachment.json" type="application/json" size="34"/>
+						<attachment title="Screenshot" source="79b4e4f1-2d84-4ecc-a458-4e9427fe44de-attachment.png" type="image/png" size="3709"/>
+					</attachments>
+					<steps>
+					</steps>
+				</step>
+				<step start="1482102232618" stop="1482102233251" status="passed">
+					<name>GET /wd/hub/session/f666db90ff2144d297d49b7c6de9bcd6/title</name>
+					<title>GET /wd/hub/session/f666db90ff2144d297d49b7c6de9bcd6/title</title>
+					<attachments>
+						<attachment title="Response" source="a974da28-8373-45bc-8d0c-bb1650e67c45-attachment.json" type="application/json" size="95"/>
+					</attachments>
+					<steps>
+					</steps>
+				</step>
+			</steps>
+			<attachments>
+				<attachment title="Response" source="43e0e227-5490-4886-a25a-cd9b08e3a19e-attachment.json" type="application/json" size="91"/>
+			</attachments>
+		</test-case>
+	</test-cases>
+</ns2:test-suite>
