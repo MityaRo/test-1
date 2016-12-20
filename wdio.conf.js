@@ -8,9 +8,9 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    user: process.env.SAUCE_USERNAME
+    user: process.env.SAUCE_USERNAME,
     // || "MityaRo",
-    key: process.env.SAUCE_ACCESS_KEY
+    key: process.env.SAUCE_ACCESS_KEY,
     // || "bef76c3b-fa2b-4e38-8549-0b4221fba729",
     
     
@@ -86,7 +86,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    baseUrl: 'heroku.com',
+    baseUrl: 'someurl.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
