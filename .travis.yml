@@ -12,11 +12,11 @@ install:
 script:
 - cat .netrc >> $HOME/.netrc
 - chmod 0600 /home/travis/.netrc
-- heroku apps
+# - heroku apps
 - if [ -z "$TRAVIS_PULL_REQUEST_BRANCH" ]; then BRANCH=$TRAVIS_BRANCH; else BRANCH=$TRAVIS_PULL_REQUEST_BRANCH; fi
-- echo $TRAVIS_PULL_REQUEST_BRANCH
-- echo $TRAVIS_BRANCH
-- echo $BRANCH
+# - echo $TRAVIS_PULL_REQUEST_BRANCH
+# - echo $TRAVIS_BRANCH
+# - echo $BRANCH
 - heroku apps | grep -q ci-workshop-test-1-$BRANCH || heroku apps:create ci-workshop-test-1-$BRANCH
 - heroku git:remote -a ci-workshop-test-1-$BRANCH
 - git push heroku $BRANCH:master
