@@ -9,23 +9,21 @@ addons:
         - heroku-toolbelt
 install:
 - npm install
-script:
+script: true
+
+before_deploy:
 - cat .netrc >> $HOME/.netrc
 - chmod 0600 /home/travis/.netrc
 - heroku apps
-- if [ -z "$TRAVIS_PULL_REQUEST_BRANCH" ]; then BRANCH=$TRAVIS_BRANCH; else BRANCH=$TRAVIS_PULL_REQUEST_BRANCH; fi
-- echo $TRAVIS_PULL_REQUEST_BRANCH
-- echo $TRAVIS_BRANCH
-- echo $BRANCH
-- heroku apps | grep -q ci-workshop-test-1-$BRANCH || heroku apps:create ci-workshop-test-1-$BRANCH
-- heroku git:remote -a ci-workshop-test-1-$BRANCH
-- git push heroku $BRANCH:master
+- heroku apps | grep -q ci-workshop-test-1-$TRAVIS_BRANCH || heroku apps:create ci-workshop-test-1-$TRAVIS_BRANCH
+- heroku git:remote -a ci-workshop-test-1-$TRAVIS_BRANCH
 
-- ./node_modules/.bin/wdio wdio.conf
+deploy:
+  provider: heroku
+  api_key:
+    secure: xl2tmk3xSl4mkyNblZhmL7efJ0L1eP/DG9FuZ6WOs/Tu9X0xqt1M4+91SRTeMI5QVbRZBZfOXf9v2gt+dYHeZDAjHKt+pHH35ARcoGjiDjQ90i/bbOv8QAsNx7uA2e6HmPBcs4j0gLJyRsvP7VhnIHcJaC7gs3F6MasYDxwo2ub5zk2mLemIn+frEVKlqENNNM8f+phM8fVe91P85if598RoH7Ck5/983DXV2sEDlXucx1xjSt4iTIbirWEWkRLTSgbcLdut+1hMXbte+CTYGfHXzygn9Iu5Dq7qO9RqS9GdYySpogNIyaqcHVc+prKqXI92mY7yTBb4hPF1oVtplHQPctwPoGT6+5OMvLlk2RWwKKwaXRCirWWeuKMaXtaT2vAyqc96iHHHkzfqnCnI1hEm6qDYb9RZHov7M760bJhmXwoefGRUKseFrSCSzHtrW3iXKccSk72cNYjaiP1+IgRJ84/SzQ9e1fHN4HTCh1RZ6Fz2zkaNdrZx1gXDsSokli2RlKADM7Lyrzb3m0XiaQYP7vaDeDfifXmjifF+esZvoJrYXN46SOyIvqZRiehGXqKgRqY0kMd/Bw3Wzv0xzz7v+woE1LIGvmW9tY8MT4epMGEe6QFK2YByV24YVH/fvYXQJ+th8vm2M28H2rUEYv0PKYKeLAoyCswG29mCSlc=
+  app: ci-workshop-test-1-$TRAVIS_BRANCH
+  on: $TRAVIS_BRANCH
 
-
-# deploy:
-#   provider: heroku
-#   api_key:
-#     secure: xl2tmk3xSl4mkyNblZhmL7efJ0L1eP/DG9FuZ6WOs/Tu9X0xqt1M4+91SRTeMI5QVbRZBZfOXf9v2gt+dYHeZDAjHKt+pHH35ARcoGjiDjQ90i/bbOv8QAsNx7uA2e6HmPBcs4j0gLJyRsvP7VhnIHcJaC7gs3F6MasYDxwo2ub5zk2mLemIn+frEVKlqENNNM8f+phM8fVe91P85if598RoH7Ck5/983DXV2sEDlXucx1xjSt4iTIbirWEWkRLTSgbcLdut+1hMXbte+CTYGfHXzygn9Iu5Dq7qO9RqS9GdYySpogNIyaqcHVc+prKqXI92mY7yTBb4hPF1oVtplHQPctwPoGT6+5OMvLlk2RWwKKwaXRCirWWeuKMaXtaT2vAyqc96iHHHkzfqnCnI1hEm6qDYb9RZHov7M760bJhmXwoefGRUKseFrSCSzHtrW3iXKccSk72cNYjaiP1+IgRJ84/SzQ9e1fHN4HTCh1RZ6Fz2zkaNdrZx1gXDsSokli2RlKADM7Lyrzb3m0XiaQYP7vaDeDfifXmjifF+esZvoJrYXN46SOyIvqZRiehGXqKgRqY0kMd/Bw3Wzv0xzz7v+woE1LIGvmW9tY8MT4epMGEe6QFK2YByV24YVH/fvYXQJ+th8vm2M28H2rUEYv0PKYKeLAoyCswG29mCSlc=
-
+after_deploy:
+- ./node_modules/.bin/wdio wdio.conf || travis_terminate 1
