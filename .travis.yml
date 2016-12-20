@@ -32,4 +32,4 @@ deploy:
   on: $BRANCH
 
 after_deploy:
-- ./node_modules/.bin/wdio wdio.conf
+- ./node_modules/.bin/wdio wdio.conf || travis_terminate 1
