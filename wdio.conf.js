@@ -9,11 +9,7 @@ exports.config = {
     // values you need to put in here in order to connect to these services.
     //
     user: process.env.SAUCE_USERNAME,
-    // || "MityaRo",
     key: process.env.SAUCE_ACCESS_KEY,
-    // || "bef76c3b-fa2b-4e38-8549-0b4221fba729",
-    
-    
     //
     // ==================
     // Specify Test Files
