@@ -9,8 +9,8 @@ describe('x', function() {
   describe('1', function() {
     it('Title', function() {
         browser.url(branchUrl)
-        browser.getTitle().should.equal('')
-        browser.getUrl().should.equal(branchUrl+'/')
+        browser.getTitle().should.equal('Home - My Site')
+        browser.getText('h1').should.equal('')
     });
   });
 });
